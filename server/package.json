@@ -1,0 +1,14 @@
+{
+  "name": "adbrothers-server",
+  "version": "1.0.0",
+  "description": "Backend API for AD Brothers website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.4"
+  }
+}
