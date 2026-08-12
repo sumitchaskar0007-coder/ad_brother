@@ -34,12 +34,14 @@ jobs:
 
       - name: Build website
         working-directory: client
+        env:
+          VITE_API_URL: ${{ vars.VITE_API_URL }}
         run: npm run build
 
       - name: Add page route fallbacks
         run: |
           cp client/dist/index.html client/dist/404.html
-          for route in services about careers contact; do
+          for route in services about gallery careers contact dashboard; do
             mkdir -p "client/dist/$route"
             cp client/dist/index.html "client/dist/$route/index.html"
           done

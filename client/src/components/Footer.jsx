@@ -1,6 +1,6 @@
 import { withBase } from '../lib/paths';
 
-const nav = [['Services', '/services'], ['About', '/about'], ['Careers', '/careers'], ['Contact', '/contact']];
+const nav = [['Services', '/services'], ['About', '/about'], ['Gallery', '/gallery'], ['Careers', '/careers'], ['Contact', '/contact']];
 
 export default function Footer() {
   return (

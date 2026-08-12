@@ -6,6 +6,8 @@ import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
+import GalleryPage from './pages/GalleryPage';
+import DashboardPage from './pages/DashboardPage';
 import { withBase, withoutBase } from './lib/paths';
 
 const routes = {
@@ -14,6 +16,8 @@ const routes = {
   '/about': AboutPage,
   '/careers': CareersPage,
   '/contact': ContactPage,
+  '/gallery': GalleryPage,
+  '/dashboard': DashboardPage,
 };
 
 const metadata = {
@@ -36,6 +40,14 @@ const metadata = {
   '/contact': {
     title: 'Contact AD Brothers | Hotel Consultancy India',
     description: 'Contact AD Brothers in Pune for hotel operations, pre-opening, F&B, workforce, audit, and hospitality consulting requirements.',
+  },
+  '/gallery': {
+    title: 'Hospitality Gallery | AD Brothers',
+    description: 'View selected moments from AD Brothers hotel operations, project advisory, food and beverage, and hospitality workforce engagements.',
+  },
+  '/dashboard': {
+    title: 'Gallery Dashboard | AD Brothers',
+    description: 'Secure AD Brothers gallery administration.',
   },
 };
 
@@ -68,17 +80,19 @@ export default function App() {
     const pageMeta = metadata[path] || metadata['/'];
     document.title = pageMeta.title;
     document.querySelector('meta[name="description"]')?.setAttribute('content', pageMeta.description);
+    document.querySelector('meta[name="robots"]')?.setAttribute('content', path === '/dashboard' ? 'noindex, nofollow' : 'index, follow, max-image-preview:large');
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://sumitchaskar0007-coder.github.io/ad_brother${path === '/' ? '/' : path}`);
   }, [path]);
 
   const Page = routes[path] || HomePage;
+  const isDashboard = path === '/dashboard';
 
   return (
     <div className="min-h-screen bg-cream text-ink">
-      <Header currentPath={path} />
+      {!isDashboard && <Header currentPath={path} />}
       <main key={path} className="page-enter"><Page /></main>
-      <Footer />
-      <a
+      {!isDashboard && <Footer />}
+      {!isDashboard && <a
         href="https://wa.me/919975978310?text=Hello%20AD%20Brothers%2C%20I%20would%20like%20to%20connect."
         target="_blank"
         rel="noreferrer"
@@ -87,7 +101,7 @@ export default function App() {
       >
         <span className="chat-pulse" />
         <span>Let’s talk</span>
-      </a>
+      </a>}
     </div>
   );
 }

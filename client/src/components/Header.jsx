@@ -5,6 +5,7 @@ const nav = [
   ['Home', '/'],
   ['Services', '/services'],
   ['About', '/about'],
+  ['Gallery', '/gallery'],
   ['Careers', '/careers'],
   ['Contact', '/contact'],
 ];
