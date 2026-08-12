@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { withBase } from '../lib/paths';
 
 const segments = {
   'Hotels & Resorts': {
@@ -32,12 +33,12 @@ export default function HomePage() {
             <h1>Your next great hire is closer than you think.</h1>
             <p className="hero-lead">Specialist recruitment and manpower support for the businesses that make people feel welcome.</p>
             <div className="hero-actions">
-              <a href="/contact" data-route className="text-link">Hire your next team member <span>↗</span></a>
-              <a href="/careers" data-route className="text-link text-link-muted">Explore hospitality careers <span>→</span></a>
+              <a href={withBase('/contact')} data-route className="text-link">Hire your next team member <span>↗</span></a>
+              <a href={withBase('/careers')} data-route className="text-link text-link-muted">Explore hospitality careers <span>→</span></a>
             </div>
           </div>
           <div className="hero-visual">
-            <div className="hero-photo"><img src="/images/ad-staff.jpg" alt="Hospitality professionals connected by AD Brothers" /></div>
+            <div className="hero-photo"><img src={withBase('/images/ad-staff.jpg')} alt="Hospitality professionals connected by AD Brothers" /></div>
             <div className="hero-stamp"><strong>13</strong><span>years close to<br />hospitality</span></div>
             <div className="hero-note"><span>Based in Pune</span><strong>Working across India</strong></div>
           </div>
@@ -59,7 +60,7 @@ export default function HomePage() {
         <div className="shell">
           <div className="segment-head">
             <div><p className="kicker">Where we work</p><h2>Built around hospitality.</h2></div>
-            <a href="/services" data-route className="circle-link">View all<br />services <span>↗</span></a>
+            <a href={withBase('/services')} data-route className="circle-link">View all<br />services <span>↗</span></a>
           </div>
           <div className="segment-explorer">
             <div className="segment-tabs" role="tablist">
@@ -90,7 +91,7 @@ export default function HomePage() {
               ['02', 'Manpower', 'Reliable teams for ongoing needs, seasonal demand, and hospitality projects.'],
               ['03', 'Consulting', 'Practical guidance for workforce planning, pre-opening, and operations.'],
             ].map(([number, title, copy]) => (
-              <a href="/services" data-route className="feature-card" key={title}>
+              <a href={withBase('/services')} data-route className="feature-card" key={title}>
                 <span>{number}</span><h3>{title}</h3><p>{copy}</p><b>Discover more ↗</b>
               </a>
             ))}
@@ -99,12 +100,12 @@ export default function HomePage() {
       </section>
 
       <section className="human-section">
-        <div className="human-photo"><img src="/images/hospitality-team.jpg" alt="Hospitality recruitment consultation" /></div>
+        <div className="human-photo"><img src={withBase('/images/hospitality-team.jpg')} alt="Hospitality recruitment consultation" /></div>
         <div className="human-content">
           <p className="kicker kicker-light">A human business</p>
           <h2>We listen first.<br />Then we search.</h2>
           <p>Every assignment begins with a real conversation. That is how we understand the detail behind the requirement—and how we find people who feel right, not just look right on paper.</p>
-          <a href="/about" data-route className="text-link text-link-light">Meet AD Brothers <span>↗</span></a>
+          <a href={withBase('/about')} data-route className="text-link text-link-light">Meet AD Brothers <span>↗</span></a>
         </div>
       </section>
 
@@ -113,8 +114,8 @@ export default function HomePage() {
           <p className="kicker">Your next move</p>
           <h2>Hiring—or looking?</h2>
           <div className="cta-choice-grid">
-            <a href="/contact" data-route><span>For businesses</span><strong>I need hospitality talent</strong><b>↗</b></a>
-            <a href="/careers" data-route><span>For candidates</span><strong>I’m ready for my next role</strong><b>↗</b></a>
+            <a href={withBase('/contact')} data-route><span>For businesses</span><strong>I need hospitality talent</strong><b>↗</b></a>
+            <a href={withBase('/careers')} data-route><span>For candidates</span><strong>I’m ready for my next role</strong><b>↗</b></a>
           </div>
         </div>
       </section>

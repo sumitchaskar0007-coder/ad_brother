@@ -1,3 +1,5 @@
+import { withBase } from '../lib/paths';
+
 export default function Hero() {
   return (
     <section id="home" className="hero-section">
@@ -26,7 +28,7 @@ export default function Hero() {
 
         <div className="relative mx-auto w-full max-w-[590px] lg:mx-0">
           <div className="hero-image-wrap">
-            <img src="/images/ad-staff.jpg" alt="Hospitality professionals working with AD Brothers" className="h-full w-full object-cover" />
+            <img src={withBase('/images/ad-staff.jpg')} alt="Hospitality professionals working with AD Brothers" className="h-full w-full object-cover" />
             <div className="hero-image-shade" />
           </div>
           <div className="hero-experience-card">

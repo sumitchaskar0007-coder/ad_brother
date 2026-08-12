@@ -6,6 +6,7 @@ import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
+import { withBase, withoutBase } from './lib/paths';
 
 const routes = {
   '/': HomePage,
@@ -39,18 +40,19 @@ const metadata = {
 };
 
 export default function App() {
-  const [path, setPath] = useState(window.location.pathname.replace(/\/$/, '') || '/');
+  const currentPath = () => withoutBase(window.location.pathname).replace(/\/$/, '') || '/';
+  const [path, setPath] = useState(currentPath);
 
   useEffect(() => {
-    const onPopState = () => setPath(window.location.pathname.replace(/\/$/, '') || '/');
+    const onPopState = () => setPath(currentPath());
     const onRouteClick = (event) => {
       const link = event.target.closest('a[data-route]');
       if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const url = new URL(link.href);
       if (url.origin !== window.location.origin) return;
       event.preventDefault();
-      const nextPath = url.pathname.replace(/\/$/, '') || '/';
-      window.history.pushState({}, '', nextPath);
+      const nextPath = withoutBase(url.pathname).replace(/\/$/, '') || '/';
+      window.history.pushState({}, '', withBase(nextPath));
       setPath(nextPath);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };

@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { withBase } from '../lib/paths';
 
 const roles = [
   ['Front Office Manager', 'Front Office'], ['Receptionist', 'Front Office'], ['Guest Relations Executive', 'Front Office'],
@@ -18,7 +19,7 @@ export default function CareersPage() {
       <section className="careers-hero">
         <div className="shell careers-hero-grid">
           <div><p className="page-number">04 / CAREERS</p><p className="kicker">For hospitality professionals</p><h1>Your experience deserves the right stage.</h1><p>Join our talent network and help us understand where you have been—and where you want to go next.</p><a href="#talent-network" className="text-link">Explore role families <span>↓</span></a></div>
-          <div className="careers-photo"><img src="/images/ad-staff.jpg" alt="Hospitality professionals in a hotel kitchen" /><span>People power every<br />guest experience.</span></div>
+          <div className="careers-photo"><img src={withBase('/images/ad-staff.jpg')} alt="Hospitality professionals in a hotel kitchen" /><span>People power every<br />guest experience.</span></div>
         </div>
       </section>
 

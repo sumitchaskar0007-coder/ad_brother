@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { withBase } from '../lib/paths';
 
 const services = [
   { id: 'recruitment', number: '01', title: 'Hospitality Recruitment', intro: 'The right person for the role—and the operation.', detail: 'We source and screen talent across frontline, specialist, support, and leadership positions. Every search is shaped around your service style, location, timeline, and expectations.', items: ['Role scoping', 'Candidate sourcing', 'Initial screening', 'Interview coordination'] },
@@ -17,7 +18,7 @@ export default function ServicesPage() {
       <section className="inner-hero services-hero">
         <div className="shell inner-hero-grid">
           <div><p className="page-number">02 / SERVICES</p><p className="kicker">What we do</p><h1>People solutions for a people-first industry.</h1></div>
-          <div className="inner-hero-copy"><p>From one critical hire to a complete operational team, our work is designed around the reality of hospitality.</p><a href="/contact" data-route className="text-link">Share a requirement <span>↗</span></a></div>
+          <div className="inner-hero-copy"><p>From one critical hire to a complete operational team, our work is designed around the reality of hospitality.</p><a href={withBase('/contact')} data-route className="text-link">Share a requirement <span>↗</span></a></div>
         </div>
       </section>
 
@@ -36,7 +37,7 @@ export default function ServicesPage() {
             <h2>{active.intro}</h2>
             <p>{active.detail}</p>
             <ul>{active.items.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul>
-            <a href="/contact" data-route className="text-link text-link-light">Discuss this service <span>↗</span></a>
+            <a href={withBase('/contact')} data-route className="text-link text-link-light">Discuss this service <span>↗</span></a>
           </article>
         </div>
       </section>

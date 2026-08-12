@@ -1,3 +1,5 @@
+import { withBase } from '../lib/paths';
+
 export default function AboutPage() {
   return (
     <>
@@ -5,7 +7,7 @@ export default function AboutPage() {
         <div className="shell">
           <p className="page-number">03 / ABOUT</p>
           <div className="about-hero-title"><p className="kicker">Who we are</p><h1>Hospitality is our industry.<br /><em>People are our work.</em></h1></div>
-          <div className="about-hero-image"><img src="/images/ad-staff.jpg" alt="AD Brothers hospitality network" /></div>
+          <div className="about-hero-image"><img src={withBase('/images/ad-staff.jpg')} alt="AD Brothers hospitality network" /></div>
         </div>
       </section>
 
@@ -31,9 +33,9 @@ export default function AboutPage() {
       </section>
 
       <section className="photo-story">
-        <div className="photo-story-main"><img src="/images/about-hospitality.png" alt="AD Brothers team in Pune" /></div>
-        <div className="photo-story-copy"><p className="kicker kicker-light">Close to the work</p><h2>Small enough to care.<br />Experienced enough to deliver.</h2><p>Our approach is personal because hospitality is personal. Clients speak with people who understand the assignment. Candidates are treated as people, not profiles.</p><a href="/contact" data-route className="text-link text-link-light">Start a conversation <span>↗</span></a></div>
-        <div className="photo-story-small"><img src="/images/hotel-management.jpg" alt="Hospitality management meeting" /></div>
+        <div className="photo-story-main"><img src={withBase('/images/about-hospitality.png')} alt="AD Brothers team in Pune" /></div>
+        <div className="photo-story-copy"><p className="kicker kicker-light">Close to the work</p><h2>Small enough to care.<br />Experienced enough to deliver.</h2><p>Our approach is personal because hospitality is personal. Clients speak with people who understand the assignment. Candidates are treated as people, not profiles.</p><a href={withBase('/contact')} data-route className="text-link text-link-light">Start a conversation <span>↗</span></a></div>
+        <div className="photo-story-small"><img src={withBase('/images/hotel-management.jpg')} alt="Hospitality management meeting" /></div>
       </section>
 
       <section className="numbers-section">

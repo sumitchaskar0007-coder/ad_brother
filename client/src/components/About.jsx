@@ -1,13 +1,15 @@
+import { withBase } from '../lib/paths';
+
 export default function About() {
   return (
     <section id="about" className="section-space bg-white">
       <div className="site-container grid items-center gap-16 lg:grid-cols-2">
         <div className="relative mx-auto w-full max-w-[560px] lg:mx-0">
           <div className="about-image-main">
-            <img src="/images/about-hospitality.png" alt="AD Brothers hospitality recruitment team in Pune" className="h-full w-full object-cover object-top" />
+            <img src={withBase('/images/about-hospitality.png')} alt="AD Brothers hospitality recruitment team in Pune" className="h-full w-full object-cover object-top" />
           </div>
           <div className="about-image-secondary">
-            <img src="/images/hotel-management.jpg" alt="Hotel management consultation" className="h-full w-full object-cover" />
+            <img src={withBase('/images/hotel-management.jpg')} alt="Hotel management consultation" className="h-full w-full object-cover" />
           </div>
           <div className="about-badge"><strong>13+</strong><span>Years of industry focus</span></div>
         </div>

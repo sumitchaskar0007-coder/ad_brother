@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { withBase } from '../lib/paths';
 
 const nav = [
   ['Home', '/'],
@@ -14,19 +15,19 @@ export default function Header({ currentPath }) {
   return (
     <header className="site-header">
       <div className="header-shell">
-        <a href="/" data-route className="logo-link" onClick={() => setOpen(false)} aria-label="AD Brothers home">
-          <img src="/images/ad-brothers-logo.png" alt="AD Brothers" />
+        <a href={withBase('/')} data-route className="logo-link" onClick={() => setOpen(false)} aria-label="AD Brothers home">
+          <img src={withBase('/images/ad-brothers-logo.png')} alt="AD Brothers" />
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
           {nav.map(([label, href]) => (
-            <a key={href} href={href} data-route className={currentPath === href ? 'is-active' : ''}>{label}</a>
+            <a key={href} href={withBase(href)} data-route className={currentPath === href ? 'is-active' : ''}>{label}</a>
           ))}
         </nav>
 
         <div className="header-action">
           <a href="tel:+919975978310" className="header-phone"><span>Call our team</span><strong>+91 99759 78310</strong></a>
-          <a href="/contact" data-route className="round-arrow" aria-label="Start an enquiry">↗</a>
+          <a href={withBase('/contact')} data-route className="round-arrow" aria-label="Start an enquiry">↗</a>
         </div>
 
         <button type="button" className={`nav-toggle ${open ? 'is-open' : ''}`} onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
@@ -37,7 +38,7 @@ export default function Header({ currentPath }) {
       <div className={`mobile-drawer ${open ? 'is-open' : ''}`}>
         <nav aria-label="Mobile navigation">
           {nav.map(([label, href], index) => (
-            <a key={href} href={href} data-route onClick={() => setOpen(false)} className={currentPath === href ? 'is-active' : ''}>
+            <a key={href} href={withBase(href)} data-route onClick={() => setOpen(false)} className={currentPath === href ? 'is-active' : ''}>
               <span>0{index + 1}</span>{label}<b>↗</b>
             </a>
           ))}
