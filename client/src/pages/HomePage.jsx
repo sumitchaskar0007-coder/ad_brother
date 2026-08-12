@@ -30,19 +30,25 @@ export default function HomePage() {
         <div className="hero-index">01 / AD BROTHERS</div>
         <div className="shell home-hero-grid">
           <div className="hero-copy">
-            <p className="kicker">Hotel & hospitality management consultancy</p>
-            <h1>Better hotel operations start with the right plan.</h1>
-            <p className="hero-lead">Practical consultancy for hotel projects, pre-opening, operations, F&amp;B systems, workforce planning, and performance improvement across India.</p>
+            <p className="kicker">Independent hospitality advisory</p>
+            <h1>Hospitality assets deserve considered management.</h1>
+            <p className="hero-lead">Discreet, practical advice for hotel owners, developers, and operators navigating new projects, operational improvement, F&amp;B performance, and long-term value.</p>
             <div className="hero-actions">
-              <a href={withBase('/contact')} data-route className="text-link">Discuss your hotel project <span>↗</span></a>
-              <a href={withBase('/services')} data-route className="text-link text-link-muted">Explore consultancy services <span>→</span></a>
+              <a href={withBase('/contact')} data-route className="text-link">Request a private consultation <span>↗</span></a>
+              <a href={withBase('/services')} data-route className="text-link text-link-muted">View the advisory mandate <span>→</span></a>
             </div>
           </div>
           <div className="hero-visual">
-            <div className="hero-photo"><img src={withBase('/images/hotel-management.jpg')} alt="Hotel management consultancy meeting" /></div>
+            <div className="hero-photo"><img src={withBase('/images/hospitality-team.jpg')} alt="Independent hospitality management advisor" /></div>
             <div className="hero-stamp"><strong>13+</strong><span>years of hospitality<br />industry focus</span></div>
             <div className="hero-note"><span>Based in Pune</span><strong>Working across India</strong></div>
           </div>
+        </div>
+        <div className="shell hero-credentials" aria-label="Advisory approach">
+          <span>Owner-aligned advice</span>
+          <span>Confidential engagement</span>
+          <span>Operational due diligence</span>
+          <span>India-wide perspective</span>
         </div>
         <div className="hero-scroll">Scroll to discover <span>↓</span></div>
       </section>
@@ -54,6 +60,33 @@ export default function HomePage() {
             <h2 className="display-title">Clear systems. Strong teams.<br /><em>Better guest experiences.</em></h2>
             <p className="statement-copy">We work with owners and hospitality leaders to turn business goals into practical operating plans. The focus is simple: smoother daily operations, accountable teams, controlled costs, and consistent service.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="advisory-section">
+        <div className="shell advisory-head">
+          <div>
+            <p className="section-index">02 — EXECUTIVE ADVISORY</p>
+            <p className="kicker">For owners, developers &amp; operators</p>
+          </div>
+          <div>
+            <h2>A considered view of the entire hospitality asset.</h2>
+            <p>We connect commercial ambition with the details that shape performance: positioning, operating structure, leadership, controls, service delivery, and opening readiness.</p>
+          </div>
+        </div>
+        <div className="shell advisory-grid">
+          {[
+            ['01', 'Asset Positioning', 'Clarify the concept, market relevance, guest promise, operating model, and management priorities.'],
+            ['02', 'Operating Performance', 'Review standards, controls, productivity, reporting, and departmental accountability.'],
+            ['03', 'Opening Governance', 'Create the milestones, decision framework, readiness checks, and ownership needed for launch.'],
+            ['04', 'Leadership & Organisation', 'Shape the structure, roles, leadership capability, and workforce plan around the business.'],
+          ].map(([number, title, copy]) => (
+            <article key={number}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -101,7 +134,7 @@ export default function HomePage() {
       </section>
 
       <section className="human-section">
-        <div className="human-photo"><img src={withBase('/images/hospitality-team.jpg')} alt="Hospitality management consultation" /></div>
+        <div className="human-photo"><img src={withBase('/images/ad-staff.jpg')} alt="Hospitality leadership and operations team" /></div>
         <div className="human-content">
           <p className="kicker kicker-light">How we work</p>
           <h2>Advice grounded in daily hospitality operations.</h2>

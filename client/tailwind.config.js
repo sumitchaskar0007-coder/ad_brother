@@ -3,12 +3,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#142033',
-        cream: '#f5f7fa',
-        paper: '#ffffff',
-        teal: '#1d4ed8',
-        aqua: '#dbeafe',
-        coral: '#f59e0b',
+        ink: '#201e1a',
+        cream: '#f4f1eb',
+        paper: '#fcfbf8',
+        teal: '#9a7442',
+        aqua: '#e7dcc9',
+        coral: '#9a7442',
       },
       fontFamily: {
         sans: ['Inter', 'Arial', 'sans-serif'],
