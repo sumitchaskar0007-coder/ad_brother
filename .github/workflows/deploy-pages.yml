@@ -36,8 +36,13 @@ jobs:
         working-directory: client
         run: npm run build
 
-      - name: Add SPA fallback
-        run: cp client/dist/index.html client/dist/404.html
+      - name: Add page route fallbacks
+        run: |
+          cp client/dist/index.html client/dist/404.html
+          for route in services about careers contact; do
+            mkdir -p "client/dist/$route"
+            cp client/dist/index.html "client/dist/$route/index.html"
+          done
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
