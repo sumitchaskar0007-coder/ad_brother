@@ -29,9 +29,9 @@ export default function HomePage() {
         <div className="hero-index">01 / AD BROTHERS</div>
         <div className="shell home-hero-grid">
           <div className="hero-copy">
-            <p className="kicker">Hospitality people, placed with purpose</p>
-            <h1>Your next great hire is closer than you think.</h1>
-            <p className="hero-lead">Specialist recruitment and manpower support for the businesses that make people feel welcome.</p>
+            <p className="kicker">Hospitality recruitment specialists</p>
+            <h1>Build a stronger hospitality team.</h1>
+            <p className="hero-lead">Reliable recruitment, manpower, and consulting support for hotels, resorts, restaurants, and food-service businesses across India.</p>
             <div className="hero-actions">
               <a href={withBase('/contact')} data-route className="text-link">Hire your next team member <span>↗</span></a>
               <a href={withBase('/careers')} data-route className="text-link text-link-muted">Explore hospitality careers <span>→</span></a>

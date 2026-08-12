@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.adbrothers.in/sitemap.xml
+Sitemap: https://sumitchaskar0007-coder.github.io/ad_brother/sitemap.xml

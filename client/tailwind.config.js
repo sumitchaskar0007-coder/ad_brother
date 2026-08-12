@@ -3,16 +3,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#162a2b',
-        cream: '#f5f0e6',
-        paper: '#fffdf8',
-        teal: '#0e6969',
-        aqua: '#62c8c2',
-        coral: '#ef6b55',
+        ink: '#142033',
+        cream: '#f5f7fa',
+        paper: '#ffffff',
+        teal: '#1d4ed8',
+        aqua: '#dbeafe',
+        coral: '#f59e0b',
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'sans-serif'],
-        display: ['DM Serif Display', 'serif'],
+        sans: ['Inter', 'Arial', 'sans-serif'],
+        display: ['Inter', 'Arial', 'sans-serif'],
       },
     },
   },

@@ -68,7 +68,7 @@ export default function App() {
     const pageMeta = metadata[path] || metadata['/'];
     document.title = pageMeta.title;
     document.querySelector('meta[name="description"]')?.setAttribute('content', pageMeta.description);
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://www.adbrothers.in${path === '/' ? '/' : path}`);
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://sumitchaskar0007-coder.github.io/ad_brother${path === '/' ? '/' : path}`);
   }, [path]);
 
   const Page = routes[path] || HomePage;
