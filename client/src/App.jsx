@@ -18,24 +18,24 @@ const routes = {
 
 const metadata = {
   '/': {
-    title: 'AD Brothers | Hospitality Recruitment & Hotel Manpower India',
-    description: 'Hospitality recruitment, hotel manpower, management hiring, and consulting support from Pune across India.',
+    title: 'AD Brothers | Hotel & Hospitality Management Consultancy India',
+    description: 'Hotel operations, pre-opening, F&B, workforce, audit, and hospitality management consultancy from Pune across India.',
   },
   '/services': {
-    title: 'Hospitality Recruitment & Manpower Services | AD Brothers',
-    description: 'Explore hotel staffing, management hiring, pre-opening recruitment, operations consulting, and kitchen workforce services.',
+    title: 'Hotel Management Consultancy Services | AD Brothers',
+    description: 'Explore hotel operations, pre-opening, commercial performance, F&B, workforce advisory, and hospitality audit services.',
   },
   '/about': {
-    title: 'About AD Brothers | Hospitality Recruitment Specialists',
-    description: 'Learn about AD Brothers, a Pune-based hospitality recruitment and manpower consultancy serving the industry since 2013.',
+    title: 'About AD Brothers | Hospitality Management Consultants',
+    description: 'Learn about AD Brothers, a Pune-based hotel and hospitality management consultancy serving the industry since 2013.',
   },
   '/careers': {
     title: 'Hospitality Careers & Hotel Jobs | AD Brothers',
     description: 'Join the AD Brothers hospitality talent network for hotel, restaurant, culinary, housekeeping, and management opportunities.',
   },
   '/contact': {
-    title: 'Contact AD Brothers | Hire Hospitality Staff',
-    description: 'Contact AD Brothers in Pune for hotel manpower, hospitality recruitment, management hiring, and consulting requirements.',
+    title: 'Contact AD Brothers | Hotel Consultancy India',
+    description: 'Contact AD Brothers in Pune for hotel operations, pre-opening, F&B, workforce, audit, and hospitality consulting requirements.',
   },
 };
 

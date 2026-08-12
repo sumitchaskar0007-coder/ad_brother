@@ -9,14 +9,14 @@ export default function Footer() {
         <div className="footer-top">
           <div>
             <p className="kicker kicker-light">Start a conversation</p>
-            <h2>Good hospitality begins<br />with the right people.</h2>
+            <h2>Better hospitality begins<br />with better operations.</h2>
           </div>
-          <a href={withBase('/contact')} data-route className="footer-cta">Tell us what you need <span>↗</span></a>
+          <a href={withBase('/contact')} data-route className="footer-cta">Discuss your project <span>↗</span></a>
         </div>
         <div className="footer-grid">
           <div className="footer-brand">
             <img src={withBase('/images/ad-brothers-logo.png')} alt="AD Brothers" />
-            <p>Hospitality recruitment, manpower, and hotel consulting with a human point of view.</p>
+            <p>Hotel and hospitality management consultancy for stronger operations, capable teams, and consistent guest experiences.</p>
           </div>
           <div>
             <h3>Navigate</h3>
@@ -30,10 +30,10 @@ export default function Footer() {
           </div>
           <div>
             <h3>Focus</h3>
-            <p>Hotels &amp; Resorts</p>
-            <p>Restaurants &amp; Cafés</p>
-            <p>Clubs &amp; Catering</p>
-            <p>Commercial Kitchens</p>
+            <p>Hotel Operations</p>
+            <p>Pre-opening Projects</p>
+            <p>F&amp;B Consulting</p>
+            <p>Workforce Advisory</p>
           </div>
         </div>
         <div className="footer-bottom">

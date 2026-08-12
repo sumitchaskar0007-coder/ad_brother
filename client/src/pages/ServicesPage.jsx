@@ -2,23 +2,24 @@ import { useState } from 'react';
 import { withBase } from '../lib/paths';
 
 const services = [
-  { id: 'recruitment', number: '01', title: 'Hospitality Recruitment', intro: 'The right person for the role—and the operation.', detail: 'We source and screen talent across frontline, specialist, support, and leadership positions. Every search is shaped around your service style, location, timeline, and expectations.', items: ['Role scoping', 'Candidate sourcing', 'Initial screening', 'Interview coordination'] },
-  { id: 'manpower', number: '02', title: 'Hotel Manpower', intro: 'Dependable teams when and where you need them.', detail: 'For ongoing operations, project needs, and workforce expansion, we help build capable teams across key hotel and food-service departments.', items: ['Operational staffing', 'Department hiring', 'Team expansion', 'Pan-India search'] },
-  { id: 'leadership', number: '03', title: 'Management Search', intro: 'Leaders who raise standards and move businesses forward.', detail: 'Focused hiring for general managers, department heads, executive chefs, F&B leaders, and other experienced hospitality professionals.', items: ['Leadership mapping', 'Discreet search', 'Experience validation', 'Culture alignment'] },
-  { id: 'preopening', number: '04', title: 'Pre-opening Teams', intro: 'Build the people plan before the doors open.', detail: 'We support new hotels, restaurants, cafés, clubs, and kitchens with phased hiring plans designed around launch schedules and operating structures.', items: ['Manpower planning', 'Phased recruitment', 'Opening teams', 'Department coordination'] },
-  { id: 'consulting', number: '05', title: 'Operations Consulting', intro: 'Practical hospitality thinking, applied to your operation.', detail: 'Our consulting conversations focus on team structure, service delivery, process clarity, and the people decisions behind better daily operations.', items: ['Workforce structure', 'Service workflows', 'Role clarity', 'Operational support'] },
+  { id: 'operations', number: '01', title: 'Hotel Operations Consulting', intro: 'Turn operational gaps into a clear improvement plan.', detail: 'We review how departments work together, how service standards are delivered, and how management information supports decisions. Recommendations are practical, prioritised, and suited to the property.', items: ['Operational review', 'Department workflows', 'Service standards', 'Management reporting'] },
+  { id: 'preopening', number: '02', title: 'Pre-opening & Launch', intro: 'Prepare the operation before the first guest arrives.', detail: 'From organisation structure to opening checklists, we help owners and leadership teams sequence the work required for a controlled, confident hotel or restaurant launch.', items: ['Opening roadmap', 'SOP framework', 'Manpower plan', 'Readiness review'] },
+  { id: 'commercial', number: '03', title: 'Commercial Performance', intro: 'Improve control without compromising the guest experience.', detail: 'We help management teams examine operating costs, productivity, purchasing, revenue opportunities, and reporting routines to support healthier performance.', items: ['Cost review', 'Productivity analysis', 'Revenue opportunities', 'Control systems'] },
+  { id: 'fnb', number: '04', title: 'F&B & Kitchen Consulting', intro: 'Build efficient food operations from menu to service.', detail: 'Consulting for restaurants, cafés, banquet operations, clubs, catering businesses, and commercial kitchens, with attention to workflow, consistency, controls, and team capability.', items: ['Menu engineering', 'Kitchen planning', 'Service workflow', 'Food cost controls'] },
+  { id: 'workforce', number: '05', title: 'Workforce & HR Advisory', intro: 'Align the organisation around the operation you need.', detail: 'We define staffing levels, role responsibilities, leadership requirements, training priorities, and recruitment plans that support the business model.', items: ['Organisation structure', 'Role clarity', 'Recruitment strategy', 'Training priorities'] },
+  { id: 'audit', number: '06', title: 'Hospitality Audit', intro: 'An independent view of what is working—and what is not.', detail: 'A focused operational assessment provides owners and managers with clear findings, priority risks, and a realistic action plan for the next stage of improvement.', items: ['Property assessment', 'Gap analysis', 'Priority actions', 'Follow-up review'] },
 ];
 
 export default function ServicesPage() {
-  const [activeId, setActiveId] = useState('recruitment');
+  const [activeId, setActiveId] = useState('operations');
   const active = services.find((service) => service.id === activeId);
 
   return (
     <>
       <section className="inner-hero services-hero">
         <div className="shell inner-hero-grid">
-          <div><p className="page-number">02 / SERVICES</p><p className="kicker">What we do</p><h1>People solutions for a people-first industry.</h1></div>
-          <div className="inner-hero-copy"><p>From one critical hire to a complete operational team, our work is designed around the reality of hospitality.</p><a href={withBase('/contact')} data-route className="text-link">Share a requirement <span>↗</span></a></div>
+          <div><p className="page-number">02 / SERVICES</p><p className="kicker">Consultancy services</p><h1>Better systems for stronger hospitality businesses.</h1></div>
+          <div className="inner-hero-copy"><p>From a new hotel project to an established operation, our work connects strategy with the practical detail of daily hospitality management.</p><a href={withBase('/contact')} data-route className="text-link">Discuss your project <span>↗</span></a></div>
         </div>
       </section>
 
@@ -37,7 +38,7 @@ export default function ServicesPage() {
             <h2>{active.intro}</h2>
             <p>{active.detail}</p>
             <ul>{active.items.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul>
-            <a href={withBase('/contact')} data-route className="text-link text-link-light">Discuss this service <span>↗</span></a>
+            <a href={withBase('/contact')} data-route className="text-link text-link-light">Discuss this consultancy service <span>↗</span></a>
           </article>
         </div>
       </section>
@@ -47,9 +48,9 @@ export default function ServicesPage() {
           <div className="section-heading-row"><p className="section-index">HOW WE CAN HELP</p><h2 className="display-title">Flexible by design.<br /><em>Focused by nature.</em></h2></div>
           <div className="model-grid">
             {[
-              ['A single hire', 'A targeted search for a specific operational, specialist, or leadership position.'],
-              ['A growing department', 'Multiple hires for a team expansion, new outlet, or changing operation.'],
-              ['A complete opening team', 'Planned recruitment across functions, aligned to your pre-opening timeline.'],
+              ['A focused review', 'Assess a specific department, control issue, workflow, or management priority.'],
+              ['An improvement programme', 'Build a coordinated action plan across operations, people, standards, and performance.'],
+              ['A complete hotel project', 'Support the journey from planning and pre-opening through launch and stabilisation.'],
             ].map(([title, copy], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}
           </div>
         </div>
@@ -57,13 +58,13 @@ export default function ServicesPage() {
 
       <section className="process-dark">
         <div className="shell">
-          <p className="kicker kicker-light">How it moves</p><h2>Clear from brief to joining.</h2>
+          <p className="kicker kicker-light">Our consulting process</p><h2>Clear from assessment to action.</h2>
           <div className="process-row">
             {[
-              ['01', 'Discover', 'Business, role, culture, timeline.'],
-              ['02', 'Search', 'Focused hospitality networks.'],
-              ['03', 'Assess', 'Experience, fit, availability.'],
-              ['04', 'Connect', 'Shortlist and coordination.'],
+              ['01', 'Understand', 'Goals, property, challenges, and priorities.'],
+              ['02', 'Assess', 'Operations, systems, standards, and people.'],
+              ['03', 'Plan', 'Practical actions, owners, sequence, and measures.'],
+              ['04', 'Support', 'Implementation guidance and progress review.'],
             ].map(([num, title, copy]) => <div key={num}><span>{num}</span><h3>{title}</h3><p>{copy}</p></div>)}
           </div>
         </div>
